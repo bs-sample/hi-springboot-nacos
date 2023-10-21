@@ -1,0 +1,43 @@
+var:
+  nacos:
+    addr: test.nacos.hifor.net:11848
+    username: nacos-sample
+    password: "Ry*UuP6#k$VE^BLr"
+    namespace: f8a91229-d7cc-44ed-9cab-2d0ae253f2ef
+    group: sample-group
+  java-home: ${JAVA_HOME:empty}
+
+server:
+  #default port 8080
+  port: 8080
+nacos:
+  config:
+    bootstrap:
+      enable: true
+    server-addr: ${var.nacos.addr}
+    context-path: /nacos
+    username: ${var.nacos.username}
+    password: ${var.nacos.password}
+    namespace: ${var.nacos.namespace}
+    data-ids: test.yml,test-common.yml
+    group: ${var.nacos.group}
+    auto-refresh: true
+
+
+#    server-addr: test.hifor.net:80
+#    username: nacos
+#    password: nacos
+#    namespace: cbf9f8f3-3f47-4eb1-8aec-fd635032e43c
+#    data-ids: test.yml,config-common.yml
+#    group: HI-SPRINGBOOT
+#    auto-refresh: true
+
+#    ext-config:
+#      - data-id: config-common.yml
+#        group: HI-SPRINGBOOT
+#        type: yaml
+#        auto-refresh: true
+
+
+# ------------ nacos config ------------
+# reeources/nacos/*.yml
