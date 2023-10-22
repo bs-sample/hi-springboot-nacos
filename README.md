@@ -39,7 +39,7 @@ docker run --name nacos-test \
   -e NACOS_AUTH_TOKEN="MFFrQ3dhJENUajJjbG5MV3hNUSYxaVBKQnF6NFhPMW4=" \
   -e NACOS_AUTH_IDENTITY_KEY="YgjqYBD6gNj@y34T" \
   -e NACOS_AUTH_IDENTITY_VALUE="Z^DvAw89dfv&Z@-Q" \
-  -e NACOS_SERVER_IP=194.0.11.88 \
+  -e NACOS_SERVER_IP=194.0.11.188 \
   -p 11848:8848 \
   -p 12848:9848 \
   -d nacos/nacos-server:v2.2.2

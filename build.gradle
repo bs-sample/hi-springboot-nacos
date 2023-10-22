@@ -18,5 +18,11 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    // https://github.com/nacos-group/nacos-spring-boot-project
     implementation 'com.alibaba.boot:nacos-config-spring-boot-starter:0.2.12'
+    /*
+    nacos-config-spring-boot-starter 该版本依赖 nacos-client:2.1.0 有安全漏洞 CVE-2021-43116
+    因此单独依赖2.2.3
+    */
+    implementation 'com.alibaba.nacos:nacos-client:2.2.3'
 }
