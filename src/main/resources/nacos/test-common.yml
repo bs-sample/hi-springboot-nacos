@@ -1,2 +1,5 @@
 computername: 1111
 username: 啦啦啦
+
+var2.test: var2
+ref-pre: ${var1.test}

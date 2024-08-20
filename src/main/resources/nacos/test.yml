@@ -1,2 +1,5 @@
 test: ${JAVA_HOME}
 abc: hahaha
+
+var1.test: var1
+ref-back: ${var2.test}
