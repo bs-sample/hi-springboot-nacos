@@ -1,0 +1,10 @@
+# 引用系统环境变量
+test: ${JAVA_HOME}
+abc: hahaha
+
+# 本参数被nacos-config-b.yml引用，不能使用分行格式，会引用不到该值
+configA.test: I'm configA
+# 引用nacos另一个配置test-common.yml中的参数
+ref-back: ${configB.test}
+# 引用application.yml中的参数
+ref-application: ${var.nacos.addr}

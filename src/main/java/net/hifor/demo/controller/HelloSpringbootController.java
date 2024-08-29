@@ -25,6 +25,9 @@ public class HelloSpringbootController {
     @NacosValue(value = "${ref-pre:null}", autoRefreshed = true)
     private String ref_pre;
 
+    @NacosValue(value = "${ref-application:null}", autoRefreshed = true)
+    private String ref_application;
+
     /**
      * 获取的是操作系统的环境变量，不会被Nacos配置覆盖
      */
@@ -43,11 +46,12 @@ public class HelloSpringbootController {
     public String hello() {
         return "Hello Spring boot!"
                 + "<br/>environment.javaHome: " + envJavaHome
-                + "<br/>nacos.test.yml abc: " + abc
-                + "<br/>test: " + test
+                + "<br/>nacos-config-a.yml abc: " + abc
+                + "<br/>nacos-config-a.yml test: " + test
                 + "<br/>username: " + username
                 + "<br/>ref-back: " + ref_back
                 + "<br/>ref-pre: " + ref_pre
+                + "<br/>ref-application: " + ref_application
                 ;
     }
 }

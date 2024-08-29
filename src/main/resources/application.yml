@@ -7,6 +7,8 @@ var:
     group: sample-group
   java-home: ${JAVA_HOME:empty}
 
+var-application-yml: hahalala
+
 server:
   #default port 8080
   port: 8080
@@ -19,7 +21,7 @@ nacos:
     username: ${var.nacos.username}
     password: ${var.nacos.password}
     namespace: ${var.nacos.namespace}
-    data-ids: test.yml,test-common.yml
+    data-ids: nacos-config-a.yml,nacos-config-b.yml
     group: ${var.nacos.group}
     auto-refresh: true
 

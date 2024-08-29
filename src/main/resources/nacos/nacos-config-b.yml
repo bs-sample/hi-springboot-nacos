@@ -1,0 +1,7 @@
+computername: 1111
+username: 啦啦啦
+
+# 本参数被test.yml引用，不能使用分行格式，会引用不到该值
+configB.test: This is configB
+# 引用nacos另一个配置test.yml中的参数
+ref-pre: ${configA.test}
